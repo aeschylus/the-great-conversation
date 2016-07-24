@@ -1,0 +1,275 @@
+[
+  {
+    "author": "Aeschines",
+    "language": "Wrote in Greek",
+    "id":37,
+    "years": ["390 B.C.E", "314 B.C.E."]
+  },
+  {
+    "author": "Aeschylus",
+    "id":16,
+    "language": "Wrote in Greek",
+    "years": ["525 B.C.E", "456 B.C.E."]
+  },
+  {
+    "author": "Aesop",
+    "id":38,
+    "language": "Wrote in Greek",
+    "years": ["~500 B.C.E"]
+  },
+  {
+    "author": "Andocides",
+    "language": "Wrote in Greek",
+    "years": ["440 B.C.E.", "391 B.C.E."]
+  },
+  {
+    "author": "Antiphon",
+    "language": "Wrote in Greek",
+    "years": ["480 B.C.E", "411 B.C.E."]
+  },
+  {
+    "author": "Apollodorus",
+    "language": "Wrote in Greek",
+    "years": ["~140 B.C.E."]
+  },
+  {
+    "author": "Apollonius",
+    "id":25,
+    "language": "Wrote in Greek",
+    "years": ["~295 B.C.E."]
+  },
+  {
+    "author": "Apuleius",
+    "language": "Wrote in Latin",
+    "years": ["124 A.C.E.", "~170 A.C.E."]
+  },
+  {
+    "author": "Aristophanes",
+    "id":21,
+    "language": "Wrote in Greek",
+    "years": ["450 B.C.E", "388 B.C.E."]
+  },
+  {
+    "author": "Aristotle",
+    "id":2,
+    "language": "Wrote in Greek",
+    "years": ["384 B.C.E.", "322 B.C.E."]
+  },
+  {
+    "author": "Marcus Aurelius",
+    "id":17,
+    "language": "Wrote in Greek",
+    "years": ["121 A.C.E.", "180 A.C.E."]
+  },
+  {
+    "author": "Augustus",
+    "language": "Wrote in Latin",
+    "years": ["63 B.C.E.", "14 A.C.E."]
+  },
+  {
+    "author": "Julius Caesar",
+    "id":27,
+    "language": "Wrote in Latin",
+    "years": ["100 B.C.E", "44 B.C.E."]
+  },
+  {
+    "author": "Cicero",
+    "id":43,
+    "language": "Wrote in Latin",
+    "years": ["106 B.C.E.", "43 B.C.E."]
+  },
+  {
+    "author": "Demades",
+    "language": "Wrote in Greek",
+    "years": ["380 B.C.E.", "319 B.C.E."]
+  },
+  {
+    "author": "Demosthenes",
+    "language": "Wrote in Greek",
+    "years": ["384 B.C.E.", "322 B.C.E."]
+  },
+  {
+    "author": "Dinarchus",
+    "language": "Wrote in Greek",
+    "years": ["360 B.C.E.", "292 B.C.E."]
+  },
+  {
+    "author": "Diodorus",
+    "language": "Wrote in Greek",
+    "years": ["~0 B.C.E."]
+  },
+  {
+    "author": "Epictetus",
+    "id":40,
+    "language": "Wrote in Greek",
+    "years": ["55 A.C.E.", "105 A.C.E."]
+  },
+  {
+    "author": "Epicurus",
+    "id":10,
+    "language": "Wrote in Greek",
+    "years": ["341 B.C.E.", "270 B.C.E."]
+  },
+  {
+    "author": "Euclid",
+    "id":33,
+    "language": "Wrote in Greek",
+    "years": ["~300 B.C.E."]
+  },
+  {
+    "author": "Euripides",
+    "id":41,
+    "language": "Wrote in Greek",
+    "years": ["484 B.C.E.", "406 B.C.E."]
+  },
+  {
+    "author": "Galen",
+    "id":45,
+    "language": "Wrote in Greek",
+    "years": ["129 A.C.E.", "216 A.C.E."]
+  },
+  {
+    "author": "Herodotus",
+    "id": 23,
+    "language": "Wrote in Greek",
+    "years": ["484 B.C.E.", "430 B.C.E."]
+  },
+  {
+    "author": "Hesiod",
+    "language": "Wrote in Greek",
+    "years": ["700 B.C.E."]
+  },
+  {
+    "author": "Hippocrates",
+    "id": 39,
+    "language": "Wrote in Greek",
+    "years": ["460 B.C.E.", "377 B.C.E."]
+  },
+  {
+    "author": "Hirtius",
+    "language": "Wrote in Latin",
+    "years": ["90 B.C.E.", "43 B.C.E."]
+  },
+  {
+    "author": "Homer",
+    "id": 30,
+    "language": "Wrote in Greek",
+    "years": ["800 B.C.E."]
+  },
+  {
+    "author": "Horace",
+    "id": 28,
+    "language": "Wrote in Latin",
+    "years": ["65 B.C.E.", "8 B.C.E."]
+  },
+  {
+    "author": "Isocrates",
+    "language": "Wrote in Greek",
+    "years": ["436 B.C.E.", "338 B.C.E."]
+  },
+  {
+    "author": "Josephus",
+    "language": "Wrote in Greek",
+    "years": ["37 A.C.E.", "100 A.C.E."]
+  },
+  {
+    "author": "Livy",
+    "id": 26,
+    "language": "Wrote in Latin",
+    "years": ["59 B.C.E.", "17 A.C.E."]
+  },
+  {
+    "author": "Lucan",
+    "language": "Wrote in Latin",
+    "years": ["39 A.C.E.", "65 A.C.E."]
+  },
+  {
+    "author": "Lucretius",
+    "language": "Wrote in Latin",
+    "years": ["~0 B.C.E."]
+  },
+  {
+    "author": "Lycurgus",
+    "language": "Wrote in Greek",
+    "years": ["390 B.C.E.", "324 B.C.E."]
+  },
+  {
+    "author": "Lysias",
+    "language": "Wrote in Greek",
+    "years": ["445 B.C.E.", "380 B.C.E."]
+  },
+  {
+    "author": "Ovid",
+    "language": "Wrote in Latin",
+    "years": ["43 B.C.E.", "17 A.C.E."]
+  },
+  {
+    "author": "Pausanias",
+    "language": "Wrote in Greek",
+    "years": ["143 A.C.E.", "176 A.C.E."]
+  },
+  {
+    "author": "Pindar",
+    "id": 36,
+    "language": "Wrote in Greek",
+    "years": ["518 B.C.E.", "438 B.C.E."]
+  },
+  {
+    "author": "Plato",
+    "id": 1,
+    "language": "Wrote in Greek",
+    "years": ["428 B.C.E.", "348 B.C.E."]
+  },
+  {
+    "author": "Plotinus",
+    "language": "Wrote in Greek",
+    "years": ["205 A.C.E.", "270 A.C.E."]
+  },
+  {
+    "author": "Plutarch",
+    "language": "Wrote in Greek",
+    "years": ["46 A.C.E.", "119 A.C.E."]
+  },
+  {
+    "author": "Porphyry",
+    "language": "Wrote in Greek",
+    "years": ["234 A.C.E.", "305 A.C.E."]
+  },
+  {
+    "author": "Quintus",
+    "language": "Wrote in Greek",
+    "years": ["~375 A.C.E."]
+  },
+  {
+    "author": "Sophocles",
+    "id": 42,
+    "language": "Wrote in Greek",
+    "years": ["496 B.C.E.", "406 B.C.E."]
+  },
+  {
+    "author": "Strabo",
+    "language": "Wrote in Greek",
+    "years": ["64 B.C.E.", "23 A.C.E."]
+  },
+  {
+    "author": "Tacitus",
+    "language": "Wrote in Latin",
+    "years": ["56 A.C.E.", "120 A.C.E."]
+  },
+  {
+    "author": "Thucydides",
+    "language": "Wrote in Greek",
+    "years": ["460 B.C.E.", "404 B.C.E."]
+  },
+  {
+    "author": "Virgil",
+    "id": 35,
+    "language": "Wrote in Latin",
+    "years": ["70 B.C.E.", "19 B.C.E."]
+  },
+  {
+    "author": "Xenophon",
+    "language": "Wrote in Greek",
+    "years": ["431 B.C.E.", "349 B.C.E."]
+  }
+]

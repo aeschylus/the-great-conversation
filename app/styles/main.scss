@@ -1,0 +1,127 @@
+// bower:scss
+// endbower
+
+// color palette
+$mapBackground: rgba(245,245,220, 100);
+$landMassColor: rgba(222,184,135, 1);
+$mapBorderColor: rgba(165,42,42, 1);
+$lifeColor: maroon;
+$injuryColor: darkviolet;
+$textShadowColor: white;
+
+body, html {
+  background: beige;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height: 100%;
+  overflow:hidden;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.author {
+  position: absolute;
+}
+
+.authorLifespan {
+  background: $lifeColor;
+  opacity: 0.8;
+  width:100%;
+}
+
+.authorName {
+  font-family: Optima;
+  font-size: 0.8em;
+  text-transform: capitalize;
+  white-space:nowrap;
+}
+
+.booksContainer {
+  height: 10px;
+  box-sizing: border-box;
+  position:relative;
+  width:100%;
+  .bookCover {
+    height: 90%;
+    margin-top:2px;
+    box-shadow: 0 0 1px black;
+    position:absolute;
+  }
+}
+
+h1.main {
+  color: white;
+  font-size: 24px;
+  line-height:40px;
+  font-weight: normal;
+  font-family: optima;
+}
+
+.timeline svg {
+  margin: 0;
+  padding:0;
+  width:100%;
+  height:100%;
+}
+
+.header {
+  position: fixed;
+  height:40px;
+  width:100%;
+  background: maroon;
+  padding-left: 40px;
+}
+
+.eideticManifold {
+  width:100%;
+  height:100%;
+  margin-top:40px;
+  position: absolute;
+}
+
+.timelineHeader {
+  .timelineHeaderSvg {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    .tick text {
+      font-family: helvetica;
+      font-size: 13px;
+      stroke: maroon;
+      stroke-width: 1px;
+    }
+  }
+  height:20px;
+  background: white;
+  position:relative;
+}
+hr {
+  height: 2px;
+  background: black;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.axis line {
+    fill: none;
+    stroke: white;
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
