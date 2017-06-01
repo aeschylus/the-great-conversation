@@ -6,7 +6,8 @@ var eideticManifold = function(authorData) {
       margin = {top: 10, right: 10, bottom: 10, left: 10},
       Data,
       mode = 'timeline', // Can be ['timeline','author','book', refGraph],
-      focusedObject = 'someID';
+      focusedObject = 'someID',
+      selected ='Aeschylus';
 
   var svg = d3.select(".eideticManifold").append("svg")
         .attr('class', 'eideticManifoldSvg')
@@ -64,12 +65,43 @@ var eideticManifold = function(authorData) {
   plotAuthors(authorData);
   initialiseTimeLine(authorData);
 
-  //use as function so we can refresh points on command
-  function plotAuthors(authorData){
+  d3.select('#focusThePhilosopher').on('click', selectNext);
+
+  function selectNext() {
+    selected = authorData[authorData.indexOf(authorData.filter(function(author) {
+      return author.name === selected;
+    })[0]) + 1].name;
+
+    console.log(selected);
+
+    d3.selectAll('.author')
+      .data(authorData)
+      .filter(function(d){
+        return d.name === selected;
+      })
+      .each(function(d) {
+        d3.transition().duration(750).tween("zoom", function() {
+          var ix = d3.interpolate(x.domain(), [d.birth -10, d.death +10]);
+          return function(t) {
+            zoom.x(x.domain(ix(t)));
+            draw();
+          };
+        });
+      });
+  }
+
+  // use as function so we can refresh points on command
+  function plotAuthors(authorData) {
+    console.log(authorData);
+
+    var authorIndex = authorData.reduce(function(authorMap, nextAuthor) {
+      authorMap[nextAuthor.id] = nextAuthor;
+      return authorMap;
+    }, {});
 
     // DATA JOIN
     var authorsGroup = d3.selectAll('.eideticManifold').selectAll(".author") // add circles to new g element
-          .data(authorData, function(d) { return d.author; })
+          .data(authorData, function(d) { return d.name; })
           .style('left', function(d,i) {
             return x(d.birth) + "px";
           })
@@ -94,44 +126,41 @@ var eideticManifold = function(authorData) {
           })
           .style('width', function(d) {
             return x(d.death) - x(d.birth) + 'px';
-          })
-          .each(function(d) {
-            if (d.id) {
-              console.log(d.id);
-              d3.json('https://books.archivelab.org/v1/authors/' + d.id, function(authorData) {
-                d3.selectAll('.booksContainer')
-                  .data([d], function(d) { return d.author; })
-                  .each(function(d) {
-                    var author = d;
-                    d3.select(this).selectAll('.bookCover')
-                      .data(authorData.books)
-                      .enter()
-                      .append('img')
-                      .attr('class', 'bookCover')
-                      .attr('src', function(d, i) {
-                        return authorData.books[i].cover_url;
-                      })
-                      .style('left', function(d, i) {
-                        var interval = 100*(author.lifeSpan/authorData.books.length)/author.lifeSpan;
-                        return interval*i + '%';
-                      });
-                  });
-              });
-            }
           });
 
     var authorName = author
           .append('h2')
           .attr('class', 'authorName')
-          .text(function(d){return d.author;});
+          .text(function(d){return d.name;});
 
     var authorLifespan = author.append('div')
           .attr('class', 'authorLifespan')
           .style('height', '8px');
 
-    var authorBooks = authorsGroup.append('div')
+    var authorBooksContainer = author
+          .append('div')
           .attr('class', 'booksContainer');
 
+    var authorBooks = authorBooksContainer.selectAll('.bookCover')
+          .data(function(d) { return d.books; })
+          .enter()
+          .append('img')
+          .attr('class', 'bookCover')
+          .attr('src', function(book, i) {
+            console.log(book);
+            return book.cover_url;
+          })
+          .style('left', function(d, i) {
+            console.log(d);
+            var author = authorIndex[d.authors[0].id];
+            if (author) {
+              console.log(authorIndex);
+              console.log(d.authors[0]);
+              console.log(d.authors[0].id);
+              var interval = 100*(author.lifeSpan/author.books.length)/author.lifeSpan;
+              return interval*i + '%';
+            }
+          });
   }
 
   window.addEventListener('resize', function(event){
@@ -156,7 +185,7 @@ var eideticManifold = function(authorData) {
   }
 };
 
-d3.json('data/authors.json', function(authorData) {
+d3.json('https:/api.archivelab.org/classics/authors', function(json) {
   function yearStringToNumber(d) {
     var number = d.split(' ')[0];
     if (d.includes('~')) {
@@ -166,22 +195,27 @@ d3.json('data/authors.json', function(authorData) {
     return d.includes('B') ? -parseInt(number) : parseInt(number);
   }
 
-  authorData.forEach(function(d) {
-    d.birth = yearStringToNumber(d.years[0]);
-    d.birthApproximate = d.years[0].includes('~');
-    if (d.years[1]) {
-      d.death = yearStringToNumber(d.years[1]);
-      d.deathApproximate = d.years[1].includes('~');
-      d.lifeSpan = Math.abs(d.death - d.birth);
-    } else {
-      d.death = d.birth + 80;
-      d.deathApproximate = true;
-      d.lifeSpan = 80;
+  var authorData = json.authors.map(function(author) {
+    if (author.years && author.books) {
+      author.birth = yearStringToNumber(author.years[0]);
+      author.birthApproximate = author.years[0].includes('~');
+      if (author.years[1]) {
+        author.death = yearStringToNumber(author.years[1]);
+        author.deathApproximate = author.years[1].includes('~');
+        author.lifeSpan = Math.abs(author.death - author.birth);
+      } else {
+        author.death = author.birth + 80;
+        author.deathApproximate = true;
+        author.lifeSpan = 80;
+      }
+      return author;
     }
-  });
+    return false;
+  }).filter(function(author){ var defined = author?true:false; return defined; });
 
   eideticManifold(authorData);
 });
+
 var _now = Date.now || function() {
   return new Date().getTime();
 };
@@ -216,3 +250,4 @@ var throttle = function(func, wait, options) {
     return result;
   };
 };
+

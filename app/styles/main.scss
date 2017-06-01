@@ -22,7 +22,12 @@ body, html {
 h1, h2, h3, h4 {
   margin: 0;
 }
-
+#focusThePhilosopher {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  margin-top: 10px;
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -38,6 +43,8 @@ h1, h2, h3, h4 {
   background: $lifeColor;
   opacity: 0.8;
   width:100%;
+  box-sizing:border-box;
+  border: 1px solid white;
 }
 
 .authorName {
