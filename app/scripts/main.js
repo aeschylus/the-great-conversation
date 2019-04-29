@@ -185,7 +185,7 @@ var eideticManifold = function(authorData) {
   }
 };
 
-d3.json('https:/api.archivelab.org/classics/authors', function(json) {
+d3.json('https://api.archivelab.org/classics/authors', function(json) {
   function yearStringToNumber(d) {
     var number = d.split(' ')[0];
     if (d.includes('~')) {
