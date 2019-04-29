@@ -16,7 +16,6 @@ var eideticManifold = function(authorData) {
         .attr("width", width)
         .attr("height", width * height / width);
 
-
   var g = svg.append("g");
 
   var x = d3.scale.linear().range([0, width]);
@@ -185,7 +184,7 @@ var eideticManifold = function(authorData) {
   }
 };
 
-d3.json('https:/api.archivelab.org/classics/authors', function(json) {
+d3.json('https://api.archivelab.org/classics/authors', function(json) {
   function yearStringToNumber(d) {
     var number = d.split(' ')[0];
     if (d.includes('~')) {
@@ -250,4 +249,3 @@ var throttle = function(func, wait, options) {
     return result;
   };
 };
-
