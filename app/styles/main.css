@@ -1,0 +1,107 @@
+body, html {
+  background: beige;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+h1, h2, h3, h4 {
+  margin: 0; }
+
+#focusThePhilosopher {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  margin-top: 10px; }
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+.author {
+  position: absolute; }
+
+.authorLifespan {
+  background: maroon;
+  opacity: 0.8;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid white; }
+
+.authorName {
+  font-family: Optima;
+  font-size: 0.8em;
+  text-transform: capitalize;
+  white-space: nowrap; }
+
+.booksContainer {
+  height: 30px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%; }
+  .booksContainer .bookCover {
+    height: 90%;
+    margin-top: 2px;
+    box-shadow: 0 0 1px black;
+    position: absolute; }
+
+h1.main {
+  color: white;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: normal;
+  font-family: optima; }
+
+.timeline svg {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.header {
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  background: maroon;
+  padding-left: 40px; }
+
+.eideticManifold {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  position: absolute; }
+
+.timelineHeader {
+  height: 20px;
+  background: white;
+  position: relative; }
+  .timelineHeader .timelineHeaderSvg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; }
+    .timelineHeader .timelineHeaderSvg .tick text {
+      font-family: helvetica;
+      font-size: 13px;
+      stroke: maroon;
+      stroke-width: 1px; }
+
+hr {
+  height: 2px;
+  background: black;
+  border: 1px solid white;
+  border-radius: 2px; }
+
+.axis line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+  shape-rendering: crispEdges; }
+
+.axis text {
+  font-family: sans-serif;
+  font-size: 11px; }
